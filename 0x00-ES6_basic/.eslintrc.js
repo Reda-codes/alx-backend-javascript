@@ -31,6 +31,5 @@ module.exports = {
       files: ['*.js'],
       excludedFiles: 'babel.config.js',
     }
-  ],
-  ignorePatterns: "*-main.js",
+  ]
 };
