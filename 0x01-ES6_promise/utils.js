@@ -1,9 +1,9 @@
 export function uploadPhoto() {
-  throw new Error();
-/*   return Promise.resolve({
+  /* throw new Error(); */
+  return Promise.resolve({
     status: 200,
     body: 'photo-profile-1',
-  }); */
+  });
 }
 
 export function createUser() {
