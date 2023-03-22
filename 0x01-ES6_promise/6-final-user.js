@@ -7,10 +7,10 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       (results) => {
         const result = [];
         results.forEach((el) => {
-          result.push({ status: el.status, value: el.value ? el.value : el.reason.message });
+          result.push({ status: el.status, value: el.value ? el.value : el.reason });
         });
-        return result;
-        // console.log(result);
+        // return result;
+        console.log(result);
       },
     );
 }
