@@ -7,8 +7,35 @@ interface Teacher {
   [key: string]: any;
 }
 
+interface Student {
+  firstName: string;
+  lastName: string;
+}
+
+interface StudentClassIn {
+workOnHomework(): string;
+displayName(): string;
+}
+
+class StudentClass implements StudentClassIn{
+ 
+  constructor(public student: Student) {}
+
+  workOnHomework() {
+    return "Currently working"
+  }
+
+  displayName() {
+    return this.student.firstName
+  }
+}
+
 interface Directors extends Teacher {
   numberOfReports: number;
+}
+
+function printTeacher(firstName: string, lastName: string) {
+    return `${firstName.charAt(0)}. ${lastName}`;
 }
 
 const teacher3: Teacher = {
@@ -28,3 +55,12 @@ const director1: Directors = {
   numberOfReports: 17,
 };
 console.log(director1);
+
+console.log(printTeacher("John", "Doe"));
+
+const student1: Student = { firstName: "Darth", lastName: "Vader" };
+const student1Class = new StudentClass(student1);
+
+console.log(student1.firstName);
+console.log(student1Class.student.firstName);
+console.log(student1Class.workOnHomework());
