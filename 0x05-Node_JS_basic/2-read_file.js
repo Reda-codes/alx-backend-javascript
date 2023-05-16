@@ -13,9 +13,9 @@ function countStudents(path) {
       };
     });
     const cs = dataObject.filter((obj) => obj.field === 'CS');
-    const csNames = cs.map((obj) => ` ${obj.firstname}`);
-    const sweNames = cs.map((obj) => ` ${obj.firstname}`);
     const swe = dataObject.filter((obj) => obj.field === 'SWE');
+    const csNames = cs.map((obj) => ` ${obj.firstname}`);
+    const sweNames = swe.map((obj) => ` ${obj.firstname}`);
     console.log(`Number of students: ${cs.length + swe.length}`);
     console.log(`Number of students in CS: ${cs.length}. List:${csNames}`);
     console.log(`Number of students in CS: ${swe.length}. List:${sweNames}`);
