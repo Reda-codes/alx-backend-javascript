@@ -46,9 +46,8 @@ app.get('/students', (req, res) => {
       res.end(response);
     })
     .catch((error) => {
-      console.error(error.message);
-      res.statusCode = 500;
-      res.end('Internal Server Error');
+      const response = `This is the list of our students\n${error.message}`;
+      res.end(response);
     });
 });
 
