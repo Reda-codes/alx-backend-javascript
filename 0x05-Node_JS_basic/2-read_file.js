@@ -18,7 +18,7 @@ function countStudents(path) {
     const sweNames = swe.map((obj) => ` ${obj.firstname}`);
     console.log(`Number of students: ${cs.length + swe.length}`);
     console.log(`Number of students in CS: ${cs.length}. List:${csNames}`);
-    console.log(`Number of students in CS: ${swe.length}. List:${sweNames}`);
+    console.log(`Number of students in SWE: ${swe.length}. List:${sweNames}`);
   } catch (e) {
     throw new Error('Cannot load the database');
   }
