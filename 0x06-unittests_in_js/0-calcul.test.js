@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 /* eslint-disable jest/prefer-expect-assertions */
 /* eslint-disable jest/expect-expect */
 const assert = require('assert');
