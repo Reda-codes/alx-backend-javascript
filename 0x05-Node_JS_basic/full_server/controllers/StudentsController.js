@@ -11,7 +11,7 @@ class StudentsController {
         const sweCount = swe.length;
         const csNames = cs.map((obj) => ` ${obj.firstname}`);
         const sweNames = swe.map((obj) => ` ${obj.firstname}`);
-        const ress = `This is the list of our students\nNumber of students: ${csCount + sweCount}\nNumber of students in CS: ${csCount}. List:${csNames}\nNumber of students in SWE: ${sweCount}. List:${sweNames}`;
+        const ress = `This is the list of our students\nNumber of students in CS: ${csCount}. List:${csNames}\nNumber of students in SWE: ${sweCount}. List:${sweNames}`;
         response.end(ress);
       })
       .catch((error) => {
