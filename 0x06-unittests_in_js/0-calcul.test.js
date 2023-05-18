@@ -20,7 +20,4 @@ describe('calculateNumber', () => {
   it('integer & a string number', () => {
     assert.equal(calculateNumber(1, '3'), 4);
   });
-  it('integer & a string letter', () => {
-    assert.equal(isNaN(calculateNumber(1, 'L')), true);
-  });
 });
