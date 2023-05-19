@@ -11,11 +11,11 @@ describe('calculateNumber', () => {
   it('rounddown float & roundup float', () => {
     assert.equal(calculateNumber(1.2, 3.7), 5);
   });
-  it('integer & a roundup float', () => {
-    assert.equal(calculateNumber(3.6, 1), 5);
-  });
   it('two roundup float numbers', () => {
     assert.equal(calculateNumber(1.5, 3.7), 6);
+  });
+  it('Two rounddown floats', () => {
+    assert.equal(calculateNumber(3.1, 2.4), 5);
   });
   it('integer & a string number', () => {
     assert.equal(calculateNumber(1, '3'), 4);
